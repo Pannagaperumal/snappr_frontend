@@ -8,13 +8,18 @@ export default function Home() {
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <Camera className="h-6 w-6 text-primary" />
               <span className="font-bold text-xl">PhotoShare</span>
+            </Link>
+            <div className="flex gap-2">
+              <Button asChild variant="ghost">
+                <Link href="/signup">Sign Up</Link>
+              </Button>
+              <Button asChild variant="default">
+                <Link href="/login">Sign In</Link>
+              </Button>
             </div>
-            <Button asChild variant="default">
-              <Link href="/login">Sign In</Link>
-            </Button>
           </nav>
         </div>
       </header>
@@ -28,9 +33,11 @@ export default function Home() {
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Our AI-powered platform connects photographers and their clients, making it easy to find and download your photos using facial recognition technology.
             </p>
-            <Button asChild size="lg" className="rounded-full">
-              <Link href="/login">Get Started</Link>
-            </Button>
+            <div className="flex gap-8 justify-center">
+              <Button asChild size="lg" className="rounded-full">
+                <Link href="/signup">Get Started</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -79,7 +86,7 @@ export default function Home() {
                   Upload your photos and let our AI organize them by faces. Streamline your delivery process and delight your clients.
                 </p>
                 <Button asChild className="w-full">
-                  <Link href="/login">Start Uploading</Link>
+                  <Link href="/signup">Start Uploading</Link>
                 </Button>
               </div>
 
@@ -90,7 +97,7 @@ export default function Home() {
                   Find all your photos from events by simply uploading one reference photo of yourself. Quick, easy, and secure.
                 </p>
                 <Button asChild className="w-full">
-                  <Link href="/login">Find Your Photos</Link>
+                  <Link href="/signup">Find Your Photos</Link>
                 </Button>
               </div>
             </div>
@@ -113,17 +120,17 @@ export default function Home() {
       <footer className="border-t bg-card/50">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <Camera className="h-6 w-6 text-primary" />
               <span className="font-bold">PhotoShare</span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               © 2024 PhotoShare. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Terms</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Contact</a>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy</Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Terms</Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Contact</Link>
             </div>
           </div>
         </div>
